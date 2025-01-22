@@ -13,6 +13,7 @@
             </HorizontalStackLayout>
                        
             <Button x:Name="StartButton" Text="Empezar" Clicked="OnStartClicked" IsEnabled="False" />
+            <Button x:Name="RestartButton" Text="Reiniciar" Clicked="OnRestartClicked" IsVisible="False" />
 
             <Label x:Name="CountdownLabel" Text="3" FontSize="Header" TextColor="Coral" HorizontalOptions="Center" IsVisible="False" />
 

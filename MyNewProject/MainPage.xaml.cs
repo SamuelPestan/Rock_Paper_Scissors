@@ -28,10 +28,14 @@
 
             string machineChoice = options[random.Next(options.Length)];
             DetermineResult(userChoice, machineChoice);
+
+            // Hacer el botón reiniciar visible
+            StartButton.IsVisible = false;
+            RestartButton.IsVisible = true;
         }
 
-        private void OnOptionSelected(object sender, EventArgs e) 
-        { 
+        private void OnOptionSelected(object sender, EventArgs e)
+        {
             if (sender is Button selectedButton)
             {
                 userChoice = selectedButton.Text;
@@ -66,6 +70,26 @@
             {
                 ResultLabel.Text = $"Perdiste. Elegiste {user} y la máquina {machine}.";
             }
+        }
+
+        // Reiniciar la partida
+        private void OnRestartClicked(object sender, EventArgs e)
+        {
+            // Reiniciar variables y UI para una nueva partida
+            userChoice = string.Empty;
+            CountdownLabel.IsVisible = false;
+            ResultLabel.Text = string.Empty;
+
+            // Restablecer el borde de los botones de opciones
+            lastSelectedButton.BorderColor = Colors.Transparent;
+
+            // Hacer el botón de empezar visible nuevamente y habilitarlo
+            StartButton.IsVisible = true;
+            StartButton.Text = "Empezar";
+            StartButton.IsEnabled = false;
+
+            // Hacer el botón de reiniciar invisible
+            RestartButton.IsVisible = false;
         }
     }
 }
