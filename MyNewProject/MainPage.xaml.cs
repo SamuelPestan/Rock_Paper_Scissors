@@ -2,9 +2,9 @@
 {
     public partial class MainPage : ContentPage
     {
-        private int countdown = 3;
-        private string[] options = { "Piedra", "Papel", "Tijeras" };
-        private Random random = new Random();
+        private readonly int countdown = 3;
+        private readonly string[] options = [ "Piedra", "Papel", "Tijeras" ];
+        private readonly Random random = new();
         private string userChoice;
         private Button lastSelectedButton;
 
