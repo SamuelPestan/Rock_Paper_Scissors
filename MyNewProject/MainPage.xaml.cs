@@ -21,7 +21,10 @@
             for (int i = countdown; i > 0; i--)
             {
                 CountdownLabel.Text = i.ToString();
-                await Task.Delay(1000); // Esperar un segundo sin bloquear la UI
+
+                await CountdownLabel.ScaleTo(1.5, 150, Easing.SpringOut); // Aumenta el tamaño
+                await CountdownLabel.ScaleTo(1, 100, Easing.SpringIn);   // Reduce el tamaño de vuelta al original
+                await Task.Delay(500); // Esperar un segundo sin bloquear la UI
             }
 
             CountdownLabel.IsVisible = false;
