@@ -3,22 +3,40 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyNewProject.MainPage">
 
-    <ScrollView>
-        <VerticalStackLayout Padding="20" Spacing="20">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#462AD8" Offset="0.0" />
+                <GradientStop Color="#da34ae" Offset="0.5" />
+                <GradientStop Color="#8a16c1" Offset="1.0" />
+            </LinearGradientBrush>
+        </Grid.Background>
 
-            <HorizontalStackLayout IsVisible="True" x:Name="OptionsLayout" HorizontalOptions="Center" Spacing="15" >
-                <Button Text="Piedra" Clicked="OnOptionSelected" BorderWidth="2" BorderColor="Transparent" />
-                <Button Text="Papel" Clicked="OnOptionSelected" BorderWidth="2" BorderColor="Transparent" />
-                <Button Text="Tijeras" Clicked="OnOptionSelected" BorderWidth="2" BorderColor="Transparent" />
-            </HorizontalStackLayout>
-                       
-            <Button x:Name="StartButton" Text="Empezar" Clicked="OnStartClicked" IsEnabled="False" />
-            <Button x:Name="RestartButton" Text="Reiniciar" Clicked="OnRestartClicked" IsVisible="False" />
+        <ScrollView>
+            <VerticalStackLayout 
+                Padding="20" 
+                Spacing="20" 
+                WidthRequest="400"
+                Background="#1b2e68"
+                Margin="10">
 
-            <Label x:Name="CountdownLabel" Text="3" FontSize="Header" TextColor="Coral" HorizontalOptions="Center" IsVisible="False" />
 
-            <Label x:Name="ResultLabel" FontSize="Large" HorizontalTextAlignment="Center" />
-        </VerticalStackLayout>
-    </ScrollView>
+                <HorizontalStackLayout IsVisible="True" x:Name="OptionsLayout" HorizontalOptions="Center" Spacing="15" >
+                    <Button Text="Piedra" Clicked="OnOptionSelected" BorderWidth="2" BorderColor="Transparent" />
+                    <Button Text="Papel" Clicked="OnOptionSelected" BorderWidth="2" BorderColor="Transparent" />
+                    <Button Text="Tijeras" Clicked="OnOptionSelected" BorderWidth="2" BorderColor="Transparent" />
+                </HorizontalStackLayout>
+
+                <Button x:Name="StartButton" Text="Empezar" Clicked="OnStartClicked" IsEnabled="False" />
+                <Button x:Name="RestartButton" Text="Reiniciar" Clicked="OnRestartClicked" IsVisible="False" />
+
+                <Label x:Name="CountdownLabel" Text="3" FontSize="Header" TextColor="Coral" HorizontalOptions="Center" IsVisible="False" />
+
+                <Label x:Name="ResultLabel" FontSize="Large" HorizontalTextAlignment="Center" TextColor="White" />
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+
+    
 
 </ContentPage>
