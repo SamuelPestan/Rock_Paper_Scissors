@@ -20,11 +20,16 @@
                     Background="#1b2e68"
                     Margin="10">
 
+                <Image Source="ic_logo.png"
+                       HeightRequest="200"
+                       WidthRequest="200"
+                       HorizontalOptions="Center"
+                       Margin="0,0,0,20" />
 
                 <HorizontalStackLayout IsVisible="True" x:Name="OptionsLayout" HorizontalOptions="Center" Spacing="15" >
-                    <Button Text="Piedra" Clicked="OnOptionSelected" BorderWidth="2" BorderColor="Transparent" />
-                    <Button Text="Papel" Clicked="OnOptionSelected" BorderWidth="2" BorderColor="Transparent" />
-                    <Button Text="Tijeras" Clicked="OnOptionSelected" BorderWidth="2" BorderColor="Transparent" />
+                    <Button Text="Piedra" Clicked="OnOptionSelected" BorderWidth="2" BorderColor="Transparent" BackgroundColor="#462AD8" />
+                    <Button Text="Papel" Clicked="OnOptionSelected" BorderWidth="2" BorderColor="Transparent" BackgroundColor="#462AD8" />
+                    <Button Text="Tijeras" Clicked="OnOptionSelected" BorderWidth="2" BorderColor="Transparent" BackgroundColor="#462AD8" />
                 </HorizontalStackLayout>
 
                 <Button x:Name="StartButton" Text="Empezar" Clicked="OnStartClicked" IsEnabled="False" />
