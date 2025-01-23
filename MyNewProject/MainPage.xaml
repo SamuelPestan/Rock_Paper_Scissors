@@ -7,18 +7,18 @@
         <Grid.Background>
             <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
                 <GradientStop Color="#462AD8" Offset="0.0" />
-                <GradientStop Color="#da34ae" Offset="0.5" />
-                <GradientStop Color="#8a16c1" Offset="1.0" />
+                <GradientStop Color="#4b64b0" Offset="0.5" />
+                <GradientStop Color="#083ede" Offset="1.0" />
             </LinearGradientBrush>
         </Grid.Background>
 
         <ScrollView>
             <VerticalStackLayout 
-                Padding="20" 
-                Spacing="20" 
-                WidthRequest="400"
-                Background="#1b2e68"
-                Margin="10">
+                    Padding="20" 
+                    Spacing="20" 
+                    WidthRequest="400"
+                    Background="#1b2e68"
+                    Margin="10">
 
 
                 <HorizontalStackLayout IsVisible="True" x:Name="OptionsLayout" HorizontalOptions="Center" Spacing="15" >
@@ -36,7 +36,4 @@
             </VerticalStackLayout>
         </ScrollView>
     </Grid>
-
-    
-
 </ContentPage>
